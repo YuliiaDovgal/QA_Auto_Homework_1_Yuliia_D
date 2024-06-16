@@ -1,0 +1,38 @@
+2024-06-16 15:28:49 /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+2024-06-16 15:28:49 /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+2024-06-16 15:28:49 /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+2024-06-16 15:28:49 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+2024-06-16 15:28:49 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+2024-06-16 15:28:49 /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+2024-06-16 15:28:49 /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+2024-06-16 15:28:49 /docker-entrypoint.sh: Configuration complete; ready for start up
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET / HTTP/1.1" 200 8702 "https://classroom.google.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/stylesheets/application.adb8469c.css HTTP/1.1" 200 76332 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /css/styles.css HTTP/1.1" 200 892 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/stylesheets/application-palette.a8b3c06d.css HTTP/1.1" 200 38773 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /css/dark-mode.css HTTP/1.1" 200 6520 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/fonts/material-icons.css HTTP/1.1" 200 873 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/javascripts/modernizr.86422ebf.js HTTP/1.1" 200 7296 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/fonts/font-awesome.css HTTP/1.1" 200 30721 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/javascripts/application.c33a9706.js HTTP/1.1" 200 79589 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /tutorial/ HTTP/1.1" 200 14807 "http://localhost:8888/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /tutorial/tutorial-in-dashboard.png HTTP/1.1" 200 109800 "http://localhost:8888/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /images/docker-labs-logo.svg HTTP/1.1" 200 6469 "http://localhost:8888/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /fonts/hinted-Geomanist-Book.ttf HTTP/1.1" 200 73568 "http://localhost:8888/css/styles.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/fonts/specimen/MaterialIcons-Regular.woff2 HTTP/1.1" 200 44300 "http://localhost:8888/assets/fonts/material-icons.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:54 172.17.0.1 - - [16/Jun/2024:12:32:54 +0000] "GET /assets/fonts/specimen/FontAwesome.woff2 HTTP/1.1" 200 77160 "http://localhost:8888/assets/fonts/font-awesome.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:32:55 172.17.0.1 - - [16/Jun/2024:12:32:55 +0000] "GET /assets/images/favicon.png HTTP/1.1" 200 521 "http://localhost:8888/tutorial/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" "-"
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: using the "epoll" event method
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: nginx/1.23.3
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4) 
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: OS: Linux 5.15.153.1-microsoft-standard-WSL2
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker processes
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 30
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 31
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 32
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 33
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 34
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 35
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 36
+2024-06-16 15:28:49 2024/06/16 12:28:49 [notice] 1#1: start worker process 37
