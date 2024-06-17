@@ -1,0 +1,30 @@
+<root>
+  <name>Nord</name>
+  <breed>German shepherd dog</breed>
+  <age>5</age>
+  <servicedog>true</servicedog>
+  <favoritefood>turkey meat</favoritefood>
+  <favoritefood>liver</favoritefood>
+  <dogcompetitions>
+  <date>2020-07-15</date>
+  <title>Ukrainian Baby Winner</title>
+  </dogcompetitions>
+  <dogcompetitions>
+  <date>2021-07-20</date>
+  <title>Ukrainian Puppy Winner</title>
+  </dogcompetitions>
+  <dogcompetitions>
+  <date>2023-07-10</date>
+  <title>Young Champion of Ukraine</title>
+  </dogcompetitions>
+  <ovnercontact>
+  <name>Maks</name>
+  <lastname>Dobryy</lastname>
+  <phonenumber>+380953692545</phonenumber>
+  <email>dobmaks@gmail.com</email>
+  <address>
+  <city>Kyiv</city>
+  <street>Havdar 8</street>
+  </address> 
+  </ovnercontact>
+</root>     
