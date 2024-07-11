@@ -1,0 +1,21 @@
+---
+name: Nord
+breed: German shepherd dog
+age: "5"
+servicedog: true
+favoritefood: turkey meat, liver
+dogcompetitions:
+  -date: 2020-07-15
+  title: Ukrainian Baby Winner
+  -data: 2021-07-20
+  avard: Ukrainian Puppy Winner
+  -datum: 2023-07-10
+  prize: Young Champion of Ukraine
+ovnercontact:
+  name: Maks
+  lastname: Dobryy
+  phonenumber: "+380953692545"
+  email: dobmaks@gmail.com
+  address:
+    city: Kyiv
+    street: Havdar 8
