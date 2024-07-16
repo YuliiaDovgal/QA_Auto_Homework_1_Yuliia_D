@@ -5,9 +5,10 @@ public class Manager extends Employee {
     public Manager(String name, int age, double salary) {
         super(name, age, salary);
     }
+
     @Override
     public void performJob() {
-        System.out.println(getName() + "is a manager.");
+        System.out.println(getName() + " is a manager.");
     }
 
     @Override
