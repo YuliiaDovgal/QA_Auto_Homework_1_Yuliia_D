@@ -1,8 +1,8 @@
 public interface MessageInterface {
 
-    String getSender();
+    UserInterface getSender();
 
-    String getRecipient();
+    UserInterface getRecipient();
 
     String getMessageText();
 

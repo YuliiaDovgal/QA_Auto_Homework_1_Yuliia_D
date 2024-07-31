@@ -3,10 +3,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
 public class User implements UserInterface {
-    private final String userName;
-    private final Set<String> contacts;
-    private final List<MessageInterface> messages;
+    String userName;
+    Set<UserInterface> contacts;
+    List<MessageInterface> messages;
 
     public User(String userName) {
         this.userName = userName;
@@ -20,7 +21,7 @@ public class User implements UserInterface {
     }
 
     @Override
-    public List<String> getContacts() {
+    public List<UserInterface> getContacts() {
         return new ArrayList<>(contacts);
     }
 
@@ -30,17 +31,14 @@ public class User implements UserInterface {
     }
 
     @Override
-    public void addContact(String contact) {
+    public void addContact(UserInterface contact) {
         contacts.add(contact);
     }
 
     @Override
-    public void sendMessage(String messageText, String recipient) {
-        Message message = new Message(userName, recipient, messageText, MessageStatus.SENT);
-        User recipientUser = Main.getUser(recipient);
-        if (recipientUser != null) {
-            recipientUser.receiveMessage(message);
-        }
+    public void sendMessage(String messageText, UserInterface recipient) {
+        Message message = new Message(this, recipient, messageText, MessageStatus.SENT);
+        recipient.receiveMessage(message);
     }
 
     @Override
@@ -49,7 +47,6 @@ public class User implements UserInterface {
         message.setStatus(MessageStatus.RECEIVED);
     }
 
-
     public void readMessage(int index) {
         if (index >= 0 && index < messages.size()) {
             MessageInterface message = messages.get(index);
@@ -57,16 +54,6 @@ public class User implements UserInterface {
         }
     }
 
-
-    public void removeContact(String contact) {
-        contacts.remove(contact);
-    }
-
-    public void deleteMessage(int index) {
-        if (index >= 0 && index < messages.size()) {
-            messages.remove(index);
-        }
-    }
 
     public List<MessageInterface> getMessagesByStatus(MessageStatus status) {
         List<MessageInterface> result = new ArrayList<>();

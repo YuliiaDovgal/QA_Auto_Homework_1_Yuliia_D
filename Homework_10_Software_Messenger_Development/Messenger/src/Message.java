@@ -1,10 +1,10 @@
 public class Message implements MessageInterface {
-    private final String sender;
-    private final String recipient;
-    private final String messageText;
+    private UserInterface sender;
+    private UserInterface recipient;
+    private String messageText;
     private MessageStatus status;
 
-    public Message(String sender, String recipient, String messageText, MessageStatus status) {
+    public Message(UserInterface sender, UserInterface recipient, String messageText, MessageStatus status) {
         this.sender = sender;
         this.recipient = recipient;
         this.messageText = messageText;
@@ -12,12 +12,12 @@ public class Message implements MessageInterface {
     }
 
     @Override
-    public String getSender() {
+    public UserInterface getSender() {
         return sender;
     }
 
     @Override
-    public String getRecipient() {
+    public UserInterface getRecipient() {
         return recipient;
     }
 

@@ -4,13 +4,13 @@ public interface UserInterface {
 
         String getUserName();
 
-        List<String> getContacts();
+        List<UserInterface> getContacts();
 
         List<MessageInterface> getMessages();
 
-    void addContact(String contact);
+    void addContact(UserInterface contact);
 
-    void sendMessage(String message, String recipient);
+    void sendMessage(String message, UserInterface recipient);
 
     void receiveMessage(MessageInterface message);
 }
