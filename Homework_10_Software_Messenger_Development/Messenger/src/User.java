@@ -47,11 +47,30 @@ public class User implements UserInterface {
         message.setStatus(MessageStatus.RECEIVED);
     }
 
-    public void readMessage(int index) {
-        if (index >= 0 && index < messages.size()) {
-            MessageInterface message = messages.get(index);
-            message.setStatus(MessageStatus.READ);
+    public void readMessagesByStatus(MessageStatus status) {
+        for (MessageInterface message : messages) {
+            if (message.getStatus() == status) {
+                message.setStatus(MessageStatus.READ);
+            }
         }
+    }
+
+    public void readLatestUnreadMessage() {
+        for (MessageInterface message : messages) {
+            if (message.getStatus() == MessageStatus.RECEIVED) {
+                message.setStatus(MessageStatus.READ);
+                System.out.println("Read message:" + message.getMessageText());
+                return;
+            }
+        }
+    }
+
+    public void removeContact(UserInterface contact) {
+        contacts.remove(contact);
+    }
+
+    public void deleteMessage(MessageInterface message) {
+        messages.remove(message);
     }
 
 
@@ -63,5 +82,12 @@ public class User implements UserInterface {
             }
         }
         return result;
+    }
+
+    public void printAllMessages() {
+        System.out.println("Messages for" + userName + ":");
+        for (MessageInterface message : messages) {
+            System.out.println(message.getMessageText() + " - " + message.getStatus());
+        }
     }
 }

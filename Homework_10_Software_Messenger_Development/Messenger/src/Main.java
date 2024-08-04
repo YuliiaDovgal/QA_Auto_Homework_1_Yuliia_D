@@ -2,26 +2,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    private static final   Map<String, User> users = new HashMap<>();
-
-    public static void addUser(User user) {
-        users.put(user.getUserName(), user);
-    }
-
-    public static User getUser(String userName) {
-        return users.get(userName);
-    }
-
     public static void main(String[] args) {
+        Map<String, User> users = new HashMap<>();
+
 
         User nikita = new User("Nikita");
         User mateo = new User("Mateo");
         User daniel = new User("Daniel");
 
-
-        Main.addUser(nikita);
-        Main.addUser(mateo);
-        Main.addUser(daniel);
+        users.put(nikita.getUserName(), nikita);
+        users.put(mateo.getUserName(), mateo);
+        users.put(daniel.getUserName(), daniel);
 
 
         nikita.addContact(mateo);
@@ -43,53 +34,15 @@ public class Main {
         daniel.sendMessage("Great, we’ll meet on Saturday at 9 AM near Nikita’s place.", mateo);
 
 
-
-        System.out.println("Messages for Nikita:");
-        for (MessageInterface message : nikita.getMessages()) {
-            System.out.println(message.getMessageText() + " - " + message.getStatus());
+        for (User user : users.values()) {
+            user.readMessagesByStatus(MessageStatus.RECEIVED);
         }
 
-
-        System.out.println("Messages for Daniel:");
-        for (MessageInterface message : daniel.getMessages()) {
-            System.out.println(message.getMessageText() + " - " + message.getStatus());
+        for (User user : users.values()) {
+            user.printAllMessages();
         }
-
-        System.out.println("Messages for Mateo:");
-        for (MessageInterface message : mateo.getMessages()) {
-            System.out.println(message.getMessageText() + " - " + message.getStatus());
-        }
-
-
-        nikita.readMessage(0);
-        nikita.readMessage(1);
-        nikita.readMessage(2);
-        nikita.readMessage(3);
-        daniel.readMessage(0);
-        daniel.readMessage(1);
-        daniel.readMessage(2);
-        daniel.readMessage(3);
-        daniel.readMessage(4);
-        daniel.readMessage(5);
-        mateo.readMessage(0);
-        mateo.readMessage(1);
-
-
-        System.out.println("Messages for Nikita after reading:");
-        for (MessageInterface message : nikita.getMessages()) {
-            System.out.println(message.getMessageText() + " - " + message.getStatus());
-
-        }
-
-        System.out.println("Messages for Daniel after reading:");
-        for (MessageInterface message : daniel.getMessages()) {
-            System.out.println(message.getMessageText() + " - " + message.getStatus());
-        }
-
-        System.out.println("Messages for Mateo after reading:");
-        for (MessageInterface message : mateo.getMessages()) {
-            System.out.println(message.getMessageText() + " - " + message.getStatus());
-        }
-
     }
 }
+
+
+
