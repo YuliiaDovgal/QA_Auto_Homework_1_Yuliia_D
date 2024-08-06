@@ -1,0 +1,3 @@
+Tom,Juggling,52
+Jack,Clown,15
+Mia,Acrobat,10
