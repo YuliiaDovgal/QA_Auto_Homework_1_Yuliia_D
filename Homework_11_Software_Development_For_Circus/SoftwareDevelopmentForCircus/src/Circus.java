@@ -6,12 +6,6 @@ public class Circus<T extends CircusPerformer> {
     List<T> performers = new ArrayList<>();
     Class<T> type;
 
-
-    public Circus(Class<T> type) {
-        this.type = type;
-    }
-
-
     public void addPerformer(T performer) {
         performers.add(performer);
     }
